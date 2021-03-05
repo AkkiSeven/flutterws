@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:compasstools/compasstools.dart';
 import 'package:flutter/services.dart';
 
-void main() {
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
-      .then((_) {
-    runApp(new MyApp());
-  });
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
   @override
@@ -35,12 +30,12 @@ class _MyAppState extends State<MyApp>{
 
       switch(haveSensor) {
         case 0: {
-          sensorType="ERROR, no sensors detected. ";
+          sensorType="No sensors for Compass";
         }
         break;
 
         case 1: {
-          sensorType="Accelerometer and Magnetoneter";
+          sensorType="Accelerometer + Magnetoneter";
         }
         break;
 
@@ -50,7 +45,7 @@ class _MyAppState extends State<MyApp>{
         break;
 
         default: {
-          sensorType="ERROR, please try again.";
+          sensorType="Error!";
         }
         break;
       }
@@ -69,11 +64,9 @@ class _MyAppState extends State<MyApp>{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Compass'),
+          title: const Text('Plugin example app'),
         ),
         body: new Container(
         child: Column(
@@ -94,7 +87,7 @@ class _MyAppState extends State<MyApp>{
               return Text("Error in stream");
           },
           ),
-          Text("Using Sensor: "+sensorType),
+          Text("SensorType: "+sensorType),
           ],),
       ),
     ),
