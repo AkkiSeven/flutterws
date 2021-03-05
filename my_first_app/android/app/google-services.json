@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "486176913070",
+    "project_id": "messageapp-ebbb2",
+    "storage_bucket": "messageapp-ebbb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486176913070:android:fbd3d3495848fa03f2df3f",
+        "android_client_info": {
+          "package_name": "com.example.my_first_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486176913070-2qg17s9ia5unosp03ec8cvdp91vkejj6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.my_first_app",
+            "certificate_hash": "24c65f15746a3d3e52e22ab087b640107cc32428"
+          }
+        },
+        {
+          "client_id": "486176913070-ij9avnq1ptnatg704g1mheo0fupr7g8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcb8eETnrbOotmlOztkivNH3PfYDrcymg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486176913070-ij9avnq1ptnatg704g1mheo0fupr7g8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
