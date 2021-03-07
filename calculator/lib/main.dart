@@ -25,7 +25,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   String output = "0";
 
   String _output = "0";
@@ -33,84 +32,68 @@ class _MyHomePageState extends State<MyHomePage> {
   double num2 = 0.0;
   String operand = "";
 
-  buttonPressed(String buttonText){
-
-    if(buttonText == "CLEAR"){
-
+  buttonPressed(String buttonText) {
+    if (buttonText == "CLEAR") {
       _output = "0";
       num1 = 0.0;
       num2 = 0.0;
       operand = "";
-
-    } else if (buttonText == "+" || buttonText == "-" || buttonText  == "÷" || buttonText == "×"){
-
+    } else if (buttonText == "+" ||
+        buttonText == "-" ||
+        buttonText == "÷" ||
+        buttonText == "×") {
       num1 = double.parse(output);
 
       operand = buttonText;
 
       _output = "0";
-
-    } else if(buttonText == "."){
-
-      if(_output.contains(".")){
+    } else if (buttonText == ".") {
+      if (_output.contains(".")) {
         print("Already contains a decimal");
         return;
-
       } else {
         _output = _output + buttonText;
       }
-
-    } else if (buttonText == "="){
-
+    } else if (buttonText == "=") {
       num2 = double.parse(output);
 
-      if(operand == "+"){
+      if (operand == "+") {
         _output = (num1 + num2).toString();
       }
-      if(operand == "-"){
+      if (operand == "-") {
         _output = (num1 - num2).toString();
       }
-      if(operand == "×"){
+      if (operand == "×") {
         _output = (num1 * num2).toString();
       }
-      if(operand == "÷"){
+      if (operand == "÷") {
         _output = (num1 / num2).toString();
       }
 
       num1 = 0.0;
       num2 = 0.0;
       operand = "";
-
     } else {
-
       _output = _output + buttonText;
-
     }
 
     print(_output);
 
     setState(() {
-
       output = double.parse(_output).toStringAsFixed(2);
-      
     });
-
   }
 
-  Widget buildButton(String buttonText){
+  Widget buildButton(String buttonText) {
     return new Expanded(
-        child: new OutlineButton(
-          padding: new EdgeInsets.all(24.0),
-          child: new Text(buttonText,
-            style: TextStyle(
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold
-            ),
-            ),
-          onPressed: () => 
-            buttonPressed(buttonText)
-          ,
+      child: new OutlineButton(
+        padding: new EdgeInsets.all(24.0),
+        child: new Text(
+          buttonText,
+          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
         ),
+        onPressed: () => buttonPressed(buttonText),
+      ),
     );
   }
 
@@ -124,20 +107,17 @@ class _MyHomePageState extends State<MyHomePage> {
             child: new Column(
           children: <Widget>[
             new Container(
-              alignment: Alignment.centerRight,
-              padding: new EdgeInsets.symmetric(
-                vertical: 24.0,
-                horizontal: 12.0
-              ),
-              child: new Text(output, style: new TextStyle(
-                fontSize: 48.0,
-                fontWeight: FontWeight.bold,
-              ))),
+                alignment: Alignment.centerRight,
+                padding:
+                    new EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
+                child: new Text(output,
+                    style: new TextStyle(
+                      fontSize: 48.0,
+                      fontWeight: FontWeight.bold,
+                    ))),
             new Expanded(
               child: new Divider(),
             ),
-
-
             new Column(children: [
               new Row(children: [
                 buildButton("7"),
@@ -145,33 +125,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 buildButton("9"),
                 buildButton("÷")
               ]),
-
               new Row(children: [
                 buildButton("4"),
                 buildButton("5"),
                 buildButton("6"),
                 buildButton("×")
               ]),
-
               new Row(children: [
                 buildButton("1"),
                 buildButton("2"),
                 buildButton("3"),
                 buildButton("-")
               ]),
-
               new Row(children: [
                 buildButton("."),
                 buildButton("0"),
                 buildButton("00"),
                 buildButton("+")
               ]),
-
               new Row(children: [
                 buildButton("CLEAR"),
                 buildButton("="),
               ]),
-
             ])
           ],
         )));

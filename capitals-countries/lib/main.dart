@@ -9,11 +9,11 @@ void main() {
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {  
+  Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Capitals & Countries',
+      title: 'Quiz App',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark() ,
+      theme: ThemeData.dark(),
       home: WelcomeScreen(),
     );
   }
