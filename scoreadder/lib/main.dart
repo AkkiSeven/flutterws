@@ -7,16 +7,49 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final appTitle = 'Score Adder';
 
+    int _currentIndex = 0;
     return MaterialApp(
       title: appTitle,
       theme: ThemeData(
-        
+        // Define the default brightness and colors.
+        brightness: Brightness.dark,
+        primaryColor: Colors.blueGrey,
+        accentColor: Colors.blueGrey[800],
       ),
       home: Scaffold(
         appBar: AppBar(
           title: Text(appTitle),
         ),
         body: AddTwoNumbers(),
+        bottomNavigationBar: BottomNavigationBar(
+          selectedFontSize: 0,
+          currentIndex: _currentIndex,
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: Colors.blueGrey[500],
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.help),
+              label: 'About',
+              backgroundColor: Colors.blueGrey[400],
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.code),
+              label: 'About',
+              backgroundColor: Colors.blueGrey[300],
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.bug_report),
+              label: 'About',
+              backgroundColor: Colors.blueGrey[200],
+            ),
+          ],
+          onTap: (index) {
+            print("hi");
+          },
+        ),
       ),
       debugShowCheckedModeBanner: false,
     );
@@ -43,6 +76,7 @@ class _AddTwoNumbersState extends State<AddTwoNumbers> {
                 child: new TextField(
                   keyboardType: TextInputType.number,
                   controller: num1controller,
+                  decoration: InputDecoration(hintText: 'Score 1st Round'),
                 ),
               ),
             ],
@@ -53,6 +87,7 @@ class _AddTwoNumbersState extends State<AddTwoNumbers> {
                 child: new TextField(
                   keyboardType: TextInputType.number,
                   controller: num2controller,
+                  decoration: InputDecoration(hintText: 'Score 2nd Round'),
                 ),
               ),
             ],
@@ -61,7 +96,8 @@ class _AddTwoNumbersState extends State<AddTwoNumbers> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               RaisedButton(
-                child: Text("Score"),
+                color: Colors.blueGrey[600],
+                child: Text("Total"),
                 onPressed: () {
                   setState(() {
                     int sum = int.parse(num1controller.text) +
@@ -75,16 +111,10 @@ class _AddTwoNumbersState extends State<AddTwoNumbers> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text(
-                "Score: ",
-                style: TextStyle(
-                  fontSize: 30,
-                ),
-              ),
               new Text(
                 result,
                 style: TextStyle(
-                  fontSize: 30,
+                  fontSize: 20,
                 ),
               ),
             ],
