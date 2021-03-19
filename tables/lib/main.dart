@@ -1069,44 +1069,44 @@ class MyApp extends StatelessWidget {
                           DataColumn(label: Text('')),
                         ], rows: [
                           DataRow(cells: [
-                            DataCell(Text('2×1')),
-                            DataCell(Text('2')),
+                            DataCell(Text('17×1')),
+                            DataCell(Text('17')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×2')),
-                            DataCell(Text('4')),
+                            DataCell(Text('17×2')),
+                            DataCell(Text('34')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×3')),
-                            DataCell(Text('6')),
+                            DataCell(Text('17×3')),
+                            DataCell(Text('51')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×4')),
-                            DataCell(Text('8')),
+                            DataCell(Text('17×4')),
+                            DataCell(Text('68')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×5')),
-                            DataCell(Text('10')),
+                            DataCell(Text('17×5')),
+                            DataCell(Text('85')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×6')),
-                            DataCell(Text('12')),
+                            DataCell(Text('17×6')),
+                            DataCell(Text('102')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×7')),
-                            DataCell(Text('14')),
+                            DataCell(Text('17×7')),
+                            DataCell(Text('119')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×8')),
-                            DataCell(Text('16')),
+                            DataCell(Text('17×8')),
+                            DataCell(Text('136')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×9')),
-                            DataCell(Text('18')),
+                            DataCell(Text('17×9')),
+                            DataCell(Text('153')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×10')),
-                            DataCell(Text('20')),
+                            DataCell(Text('17×10')),
+                            DataCell(Text('170')),
                           ]),
                         ])
                       ],
@@ -1137,44 +1137,44 @@ class MyApp extends StatelessWidget {
                           DataColumn(label: Text('')),
                         ], rows: [
                           DataRow(cells: [
-                            DataCell(Text('2×1')),
-                            DataCell(Text('2')),
-                          ]),
-                          DataRow(cells: [
-                            DataCell(Text('2×2')),
-                            DataCell(Text('4')),
-                          ]),
-                          DataRow(cells: [
-                            DataCell(Text('2×3')),
-                            DataCell(Text('6')),
-                          ]),
-                          DataRow(cells: [
-                            DataCell(Text('2×4')),
-                            DataCell(Text('8')),
-                          ]),
-                          DataRow(cells: [
-                            DataCell(Text('2×5')),
-                            DataCell(Text('10')),
-                          ]),
-                          DataRow(cells: [
-                            DataCell(Text('2×6')),
-                            DataCell(Text('12')),
-                          ]),
-                          DataRow(cells: [
-                            DataCell(Text('2×7')),
-                            DataCell(Text('14')),
-                          ]),
-                          DataRow(cells: [
-                            DataCell(Text('2×8')),
-                            DataCell(Text('16')),
-                          ]),
-                          DataRow(cells: [
-                            DataCell(Text('2×9')),
+                            DataCell(Text('18×1')),
                             DataCell(Text('18')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×10')),
-                            DataCell(Text('20')),
+                            DataCell(Text('18×2')),
+                            DataCell(Text('36')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('18×3')),
+                            DataCell(Text('54')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('18×4')),
+                            DataCell(Text('72')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('18×5')),
+                            DataCell(Text('90')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('18×6')),
+                            DataCell(Text('108')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('18×7')),
+                            DataCell(Text('126')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('18×8')),
+                            DataCell(Text('144')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('18×9')),
+                            DataCell(Text('162')),
+                          ]),
+                          DataRow(cells: [
+                            DataCell(Text('18×10')),
+                            DataCell(Text('180')),
                           ]),
                         ])
                       ],
@@ -1205,44 +1205,44 @@ class MyApp extends StatelessWidget {
                           DataColumn(label: Text('')),
                         ], rows: [
                           DataRow(cells: [
-                            DataCell(Text('2×1')),
-                            DataCell(Text('2')),
+                            DataCell(Text('19×1')),
+                            DataCell(Text('19')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×2')),
-                            DataCell(Text('4')),
+                            DataCell(Text('19×2')),
+                            DataCell(Text('38')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×3')),
-                            DataCell(Text('6')),
+                            DataCell(Text('19×3')),
+                            DataCell(Text('57')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×4')),
-                            DataCell(Text('8')),
+                            DataCell(Text('19×4')),
+                            DataCell(Text('76')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×5')),
-                            DataCell(Text('10')),
+                            DataCell(Text('19×5')),
+                            DataCell(Text('95')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×6')),
-                            DataCell(Text('12')),
+                            DataCell(Text('19×6')),
+                            DataCell(Text('114')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×7')),
-                            DataCell(Text('14')),
+                            DataCell(Text('19×7')),
+                            DataCell(Text('133')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×8')),
-                            DataCell(Text('16')),
+                            DataCell(Text('19×8')),
+                            DataCell(Text('152')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×9')),
-                            DataCell(Text('18')),
+                            DataCell(Text('19×9')),
+                            DataCell(Text('171')),
                           ]),
                           DataRow(cells: [
-                            DataCell(Text('2×10')),
-                            DataCell(Text('20')),
+                            DataCell(Text('19×10')),
+                            DataCell(Text('190')),
                           ]),
                         ])
                       ],
