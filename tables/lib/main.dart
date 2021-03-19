@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Tables',
       theme: ThemeData(
-        // Define the default brightness and colors.
         brightness: Brightness.light,
         primaryColor: Colors.blueGrey[900],
         accentColor: Colors.blue[300],
+        textTheme: TextTheme(),
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -41,7 +46,9 @@ class MyApp extends StatelessWidget {
                           DataColumn(label: Text('')),
                         ], rows: [
                           DataRow(cells: [
-                            DataCell(Text('2 × 1')),
+                            DataCell(Text(
+                              '2 × 1',
+                            )),
                             DataCell(Text('2')),
                           ]),
                           DataRow(cells: [
