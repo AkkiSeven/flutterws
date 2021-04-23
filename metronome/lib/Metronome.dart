@@ -174,7 +174,7 @@ class MetronomeControlState extends State<MetronomeControl> {
         children: [
           SizedBox(height: 20),
           Expanded(child: LayoutBuilder(builder: (context, constraints) {
-            double aspectRatio = 1.5; // height:width
+            double aspectRatio = 1.5;
             double width =
                 (constraints.maxHeight >= constraints.maxWidth * aspectRatio)
                     ? constraints.maxWidth
@@ -189,7 +189,7 @@ class MetronomeControlState extends State<MetronomeControl> {
           Container(height: 20),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
             RaisedButton(
-                color: Colors.blue,
+                color: Colors.grey[800],
                 textColor: Colors.white,
                 child: Text(_metronomeState == MetronomeState.Stopped
                     ? "Start Metronome"
@@ -204,9 +204,9 @@ class MetronomeControlState extends State<MetronomeControl> {
                             : _stop();
                       }),
             RaisedButton(
-              color: Colors.blue,
+              color: Colors.grey[800],
               textColor: Colors.white,
-              child: Text("Tap"),
+              child: Text("Tap To Change Tempo"),
               onPressed: _metronomeState == MetronomeState.Stopped
                   ? () {
                       _tap();
@@ -300,7 +300,6 @@ class WandCoords {
   double bobMaxY;
   double bobTravel;
 
-  // calculates all coordinates relative to the rotation center and scaled based on height and width.
   WandCoords(
       double width, double height, int tempo, int minTempo, int maxTempo) {
     rotationCenter = new Offset(0, 0);
@@ -323,7 +322,6 @@ class WandCoords {
 }
 
 class MetronomeWandPainter extends CustomPainter {
-  // props required for painting
   double width;
   double height;
   int tempo;
@@ -353,7 +351,7 @@ class MetronomeWandPainter extends CustomPainter {
           ..style = PaintingStyle.stroke
           ..strokeWidth = width * 0.015,
         "fillCounterWeight": Paint()
-          ..color = Colors.blue
+          ..color = Colors.black
           ..strokeCap = StrokeCap.round
           ..style = PaintingStyle.fill,
         "fillRotationCenter": Paint()
@@ -361,7 +359,7 @@ class MetronomeWandPainter extends CustomPainter {
           ..strokeCap = StrokeCap.round
           ..style = PaintingStyle.fill,
         "fillBob": Paint()
-          ..color = Colors.blue
+          ..color = Colors.grey[900]
           ..strokeCap = StrokeCap.round
           ..style = PaintingStyle.fill,
       };
@@ -372,7 +370,6 @@ class MetronomeWandPainter extends CustomPainter {
     if (paints == null) _initFillsAndPaints();
 
     if (wandPicture == null) {
-      // draw unrotated wand on to a picture canvas
       ui.PictureRecorder pictureRecorder = ui.PictureRecorder();
       Canvas pictureCanvas = new Canvas(pictureRecorder);
 
@@ -434,10 +431,9 @@ class MetronomeWandPainter extends CustomPainter {
   bool shouldRepaint(MetronomeWandPainter oldDelegate) {
     if (oldDelegate.tempo != tempo) {
       wandPicture =
-          null; // we can't re-use the last drawing if the tempo changed
+          null;
     }
 
-    // if either the rotationAngle or the tempo changed we will need to repaint...
     return (oldDelegate.rotationAngle != rotationAngle ||
         oldDelegate.tempo != tempo);
   }
